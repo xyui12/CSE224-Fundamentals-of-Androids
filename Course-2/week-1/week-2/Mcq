@@ -1,0 +1,172 @@
+week-2
+
+Self review: Extensions
+Q1. what was rhe output when you ran your solution?
+(a)[Onion, Cheese, Water, Salt]
+(b)[Onion, Cheese, Water]
+(c)onion
+ANS=b
+
+Q2.Replace the Salt string in the removeSalt extension function with Cheese. Run the code. What is the output?
+(a)[Onion, Water]
+(b)[Onion, Water, Salt]
+(c)[Onion, Cheese, Water]
+ANS=b
+
+Q3. Little Lemon asks you to write a new extension function to remove an ingredient (provided as a string) from a dish. Which of these extension functions will perform the requested task?
+(a)fun String.removeIngredient(ingredient: String) { remove(ingredient) } 
+(b)fun Dish.removeIngredient(ingredient: String) { ingredients.remove(ingredient) } 
+(c)fun String.removeIngredient(dish: Dish) { dish.ingredients.remove(this) }
+ANS=b,c
+
+Knowledge check: Extensions
+
+Q1. which of the below can be inherited? 
+(a)An interface
+(b)An open class
+(c)A final class
+(d)An object
+ANS=a,b
+
+Q2Extension functions can be quite useful. Which of these are benefits of extension functions? Select all that apply.
+(a)They can be called just like normal functions of the extended class.
+(b)They can override existing functions of a class.
+(c)They can access private properties and functions of the extended class.
+(d)They allow extending final and 3rd party classes.
+ANS=a,d
+
+Q3.you are asked to implement an extension function for the final dish class that would print out its ingredients field. how would the extension function look?
+(a)fun List<Ingredient>.printIngredients(dish: Dish) { println(this) }
+(b)fun printIngredients(dish: Dish) { println(dish.ingredients) }
+(c)fun Dish.printIngredients(ingredients: List<Ingredient>) { println(ingredients) }
+(d)fun Dish.printIngredients() { println(ingredients) }
+ANS=d
+
+Self review: Write a unit test
+
+Q1. how do you convert the regular function into the test function?
+(a)Append test_ prefix to the function name.    
+(b)Mark the class where it is located with Test annotation.
+(c)Mark the function with Test annotation.
+ANS=c
+
+Q2 What is the coreect the order of AA pattern?
+(a)Act – Arrange – Assert
+(b)Arrange – Act – Assert
+(c)Assert – Act – Arrange
+ANS=b
+
+Q3.Which of three tests for Product class will fail, if you change the minimum amount for discount from 5 to 10? (Hint: update the applyDiscount function and see)
+(a)Only the second test will fail.
+(b)All tests will fail.
+(c)The first and the second tests will fail
+ANS=a
+
+Self review: Defining generic classes and functions
+
+Q1.when you run your solution for the exercise Defining generic classes and functions, what is the output?
+(a)1
+(b)[Cheese,Cheese]
+(c)2
+ANS=b
+
+Q2.If you replaced the type passed to newInventory from Cheese to Onion, when you run your solution, which of the following would be a valid statement?
+(a)cheeseInventory.addIngredient(Onion)
+(b)cheeseInventory.addIngredient("Onion")
+(c)cheeseInventory.addIngredient(Cheese)
+ANS=a
+
+Q3.For the code implemented in Step 2 of the exercise, which of the below statements are valid?
+(a)Inventory<Flour>()
+(b)Inventory<"Milk">()
+(c)Inventory<Egg>()
+ANS=a,c
+
+Knowledge check: Collections and generics
+
+Question 1 What operations can you perform on a MutableCollection but not on a Collection?
+(d)Get a count of the elements in the collection.
+(a)Add an element.
+(b)Remove an element.
+(c)Read an element.
+ANS=b,c
+
+Q2.which of the fillowing statements declare generic class in kotlin?
+(a)generic class GenericClass
+(b)abstract class GenericClass
+(c)class GenericClass
+(c)class GenericClass<TYPE>
+ANS=d
+
+Q3.You need to instantiate a field named employeeNames of type List<String>. Which of the following statements is valid in Kotlin?
+(a)val employeeNames: List<String> = ("James", "Ella")
+(b)val employeeNames: List<String> = ["James", "Ella"]
+(c)val employeeNames: List<String> = listOf("James", "Ella")
+(d)val employeeNames: List<String> = "James, Ella"
+ANS=c
+
+Module quiz: Advanced Object-Oriented Features
+
+Q1 For a class Rectangle, which of these represents the correct syntax for defining an extension function getWidth?
+(a)fun Rectangle getWidth(): Int
+(b)fun Rectangle.getWidth(): Int
+(c)fun getWidth<Rectangle>(): Int
+Ans=b
+
+Q2 For the extension function fun Rectangle.getWidth(): Int, what is the correct way to call the function in the code?
+(a)Rectangle.getWidth()
+(b)Rectangle().getWidth()
+(c)getWidth(Rectangle())
+Ans=b
+
+Q4 While using JUnit, which annotation is used to mark a function as a unit test? 1 / 1 point
+(a)@UnitTest 
+(b)@Test
+(c)@JUnitTest 
+ANS=b
+
+Q5 When should you use mocks in your tests? 0 / 1 point
+(a)When you need to define a complete alternate definition of an object to be used for testing. 
+(b)When there are objects that are not to be tested but are needed because the code under test depends on them. 
+(c)When you need to test only some specific behavior of an object Incorrect You didn’t select an answer.
+Ans=NOT
+
+Q6 Which of these is a definition of the List collection type? 1 / 1 
+(a)point An unordered group of elements that cannot contain duplicate elements. 
+(b)An ordered group of elements that can contain duplicate elements.
+(c)An unordered group of elements that can contain duplicate elements.
+Ans=b
+
+Q7. what is the output below code?
+val numberSet = setOf(1, 8, 5, 7, 5, 2)
+println(numberSet)
+(a)[1, 8, 5, 7, 5, 2]
+(b)[1, 8, 5, 7, 2]
+(c)[1, 8, 7, 2]
+Ans=b
+
+Q8. what is the output below code?
+val mao=maOf(
+1 to 90
+2 to 93
+3 to 91
+4 to 93
+2 to 95
+5 to 93)
+peintln(map)
+(a){1=90, 2=93, 3=91, 4=93, 5=93}
+(b){1=90, 2=95, 3=91, 4=93, 5=93}
+(c){1=90, 2=93, 3=91, 4=93, 2=95, 5=93}
+Ans=b
+
+Q9 Which of these represents the correct syntax for defining a generic class?
+(a)class <T> Item(t: T) { }
+(b)class Item<T>(t: T) { }
+(c)class <T>.Item(t: T) { }
+Ans=b
+
+Q9 Which of these represents the correct syntax for defining a generic function?
+(a)fun sampleFunction<T> (item: T) { }
+(b)fun <T> sampleFunction(item: T) { }
+(c)fun <T> sampleFunction(item: T) { }
+Ans=b
